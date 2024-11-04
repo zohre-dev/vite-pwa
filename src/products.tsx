@@ -1,5 +1,5 @@
 import { useState } from "react";
-import imgEverywhere from "../public/assets/images/everyWhereMenu.svg";
+import imgFloatingMenu from "../public/assets/images/floatingMenuImg.svg";
 import imgShoppingBag from "../public/assets/images/shoppingBag.svg";
 import imgHome from "../public/assets/images/home.svg";
 import imgShoppingCart from "../public/assets/images/shoppingCart.svg";
@@ -26,37 +26,36 @@ const Products = () => {
         </div>
       </div>
       <Draggable {...dragHandlers}>
-        <img src={imgEverywhere} alt="" />
+        <img src={imgFloatingMenu} alt="" />
       </Draggable>
-      <div className="flex flex-col gap-4 p-5 bg-[linear-gradient(132.76deg,rgba(255, 255, 255, 0.3)_3.98%,rgba(115, 115, 115, 0.3)_98.45%)] border border-2 rounded-[20px]">
-        <div className="flex gap-10">
+      <div className="flex gap-[22px] p-5 bg-[linear-gradient(132.76deg,rgba(255, 255, 255, 0.3)_3.98%,rgba(115, 115, 115, 0.3)_98.45%)]  border-2 rounded-[20px]">
+        <div className="flex flex-col gap-[15px]">
           <div className="flex flex-col items-center justify-center">
             <img src={imgShoppingCart} className="w-8 h-8" />
             <span>Cart</span>
           </div>
+          <div className="flex flex-col items-center justify-center">
+            <img src={imgProfle} className="w-8 h-8" />
+            <span>Profile</span>
+          </div>
+        </div>
 
+        <div className="flex flex-col gap-[15px]">
           <div className="flex flex-col items-center justify-center">
             <img src={imgHome} className="w-8 h-8" />
             <span>Home</span>
           </div>
 
           <div className="flex flex-col items-center justify-center">
-            <img src={imgShoppingBag} className="w-8 h-8" />
-            <span>Orders</span>
-          </div>
-        </div>
-
-        <div className="flex gap-10">
-          <div className="flex flex-col items-center justify-center">
-            <img src={imgProfle} className="w-8 h-8" />
-            <span>Profile</span>
-          </div>
-
-          <div className="flex flex-col items-center justify-center">
             <img src={imgPayment} className="w-8 h-8" />
             <span>Payment</span>
           </div>
-
+        </div>
+        <div className="flex flex-col gap-[15px]">
+          <div className="flex flex-col items-center justify-center">
+            <img src={imgShoppingBag} className="w-8 h-8" />
+            <span>Orders</span>
+          </div>
           <div className="flex flex-col items-center justify-center">
             <img src={imgPay} className="w-8 h-8" />
             <span>Pay</span>
